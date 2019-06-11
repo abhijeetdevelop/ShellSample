@@ -15,31 +15,37 @@
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="Yellow"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
-            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style x:Key="ShellItemStyle" TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
-    <FlyoutItem Title="First flyout">
-        <Tab Route="Home1" Title="Home">
-            <ShellContent ContentTemplate="{DataTemplate local:VisualChallenge}"/>           
-        </Tab>
-        <Tab Route="Contacts1" Title="Contacts">
+    <Shell.FlyoutHeader>
+        <Label Text="Flyouts" TextColor="White" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+    </Shell.FlyoutHeader>
+
+
+    <ShellItem Title="First flyout" Icon="one.png" Style="{StaticResource ShellItemStyle}">
+        <Tab Route="Home1" Title="Home" Icon="one.png" >
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallenge}"/>
         </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Second flyout">
-        <Tab Title="Home" Route="Home2">
+        <Tab Route="Contacts1" Title="Contacts" Icon="one.png">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallenge}"/>
         </Tab>
-        <Tab Title="Contacts" Route="Contacts2">
+    </ShellItem>
+    <ShellItem Title="Second flyout" FlyoutIcon="two.png">
+        <Tab Title="Home" Route="Home2" Icon="two.png">
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallenge}"/>
         </Tab>
-        <Tab Title="Details" Route="Details2">
+        <Tab Title="Contacts" Route="Contacts2" Icon="two.png" >
             <ShellContent ContentTemplate="{DataTemplate local:VisualChallenge}"/>
         </Tab>
-    </FlyoutItem>
+        <Tab Title="Details" Route="Details2" Icon="two.png">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualChallenge}"/>
+        </Tab>
+    </ShellItem>
+    
 </Shell>

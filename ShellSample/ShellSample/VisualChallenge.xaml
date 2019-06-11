@@ -8,15 +8,9 @@
     <ContentPage.Content>
         <ScrollView>
             <FlexLayout Margin="20" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
-
-                <Label Text="Start Here" FontSize="24" HorizontalTextAlignment="Center"/>
-
+                <Label Text="Shell sample page" FontSize="24" HorizontalTextAlignment="Center"/>
                 <Button Text="Go to contacts of second flyout" Clicked="Button_Clicked" />
-
             </FlexLayout>
-            
-            
-        </ScrollView>
-        
+        </ScrollView>        
     </ContentPage.Content>
 </ContentPage>
